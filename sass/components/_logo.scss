@@ -1,0 +1,23 @@
+.logo-link-dark {
+  margin-right: 88px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--primery-text-color);
+  text-decoration: none;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+.logo-item {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
