@@ -233,9 +233,15 @@ img {
   fill: currentColor;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 479px) {
   .modal {
-    max-width: 450px;
+    width: 90vw;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
   }
 }
 
@@ -724,7 +730,8 @@ img {
 
 .hero {
   text-align: center;
-  padding: 118px 60px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: var(--background-secodery-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero-mobile.jpg);
   background-repeat: no-repeat;
@@ -1295,11 +1302,11 @@ img {
 }
 
 .foter-form-input {
+  display: block;
+  width: 95vw;
+  padding: 15px 16px;
   margin-bottom: 20px;
   outline: none;
-  padding: 15px 16px;
-  width: 358px;
-  height: 50px;
   color: var(--primery-title-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -1315,8 +1322,15 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (min-width: 768px) {
+  .foter-form-input {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .foter-form-input {
+    width: 358px;
     margin-bottom: 0;
   }
 }
