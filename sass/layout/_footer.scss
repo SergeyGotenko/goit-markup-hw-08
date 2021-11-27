@@ -8,15 +8,16 @@
   }
 }
 .footer-container {
-  display: flex;
-  flex-direction: column;
+  // flex-direction: column;
 
   @media screen and (min-width: 768px) {
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
   }
   @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
     align-items: baseline;
     justify-content: space-between;
   }
@@ -111,15 +112,29 @@
 
 // --------FOOTER FORM----------- //
 
+.foter-form-box {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .footer-form {
   margin-left: 0;
   margin-right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
   @media screen and (min-width: 1200px) {
-    align-items: start;
+    display: flex;
+    align-items: center;
   }
 }
 .footer-form-head {
@@ -132,23 +147,21 @@
   color: var(--primery-title-color);
 }
 
-.foter-form-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media screen and (min-width: 1200px) {
-    flex-direction: row;
-    align-items: center;
-  }
-}
 .foter-form-label {
   @media screen and (min-width: 1200px) {
     margin-right: 12px;
   }
 }
 .foter-form-input {
-  display: block;
-  width: 95vw;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-bottom: 0;
+  }
 
   padding: 15px 16px;
   margin-bottom: 20px;
@@ -167,13 +180,6 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
   }
-  @media screen and (min-width: 768px) {
-    width: 450px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 358px;
-    margin-bottom: 0;
-  }
 }
 
 .footer-form-btn {
@@ -190,6 +196,9 @@
   letter-spacing: 0.06em;
   color: var(--primery-title-color);
   cursor: pointer;
+  @media screen and (max-width: 1199px) {
+    margin: 0 auto;
+  }
 }
 .footer-form-icon {
   margin-left: 10px;

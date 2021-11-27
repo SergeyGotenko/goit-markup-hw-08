@@ -787,7 +787,7 @@ img {
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../img/hero/hero@2x-tablet.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero@2x-tablet.jpg);
   }
 }
 
@@ -803,7 +803,7 @@ img {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../img/hero/hero@2x-desktop.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero@2x-desktop.jpg);
   }
 }
 
@@ -1188,13 +1188,9 @@ img {
   }
 }
 
-.footer-container {
-  display: flex;
-  flex-direction: column;
-}
-
 @media screen and (min-width: 768px) {
   .footer-container {
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
@@ -1203,6 +1199,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer-container {
+    flex-wrap: nowrap;
     align-items: baseline;
     justify-content: space-between;
   }
@@ -1309,18 +1306,31 @@ img {
   text-decoration: none;
 }
 
+@media screen and (min-width: 768px) {
+  .foter-form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .foter-form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .footer-form {
   margin-left: 0;
   margin-right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 @media screen and (min-width: 1200px) {
   .footer-form {
-    align-items: start;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -1334,19 +1344,6 @@ img {
   color: var(--primery-title-color);
 }
 
-.foter-form-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media screen and (min-width: 1200px) {
-  .foter-form-box {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .foter-form-label {
     margin-right: 12px;
@@ -1354,8 +1351,7 @@ img {
 }
 
 .foter-form-input {
-  display: block;
-  width: 95vw;
+  width: 100%;
   padding: 15px 16px;
   margin-bottom: 20px;
   outline: none;
@@ -1365,13 +1361,6 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
-}
-
-.foter-form-input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
 }
 
 @media screen and (min-width: 768px) {
@@ -1385,6 +1374,13 @@ img {
     width: 358px;
     margin-bottom: 0;
   }
+}
+
+.foter-form-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-form-btn {
@@ -1401,6 +1397,12 @@ img {
   letter-spacing: 0.06em;
   color: var(--primery-title-color);
   cursor: pointer;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-form-btn {
+    margin: 0 auto;
+  }
 }
 
 .footer-form-icon {
@@ -1516,24 +1518,19 @@ img {
 }
 
 .portfolio-link {
-  display: block;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus {
+.portfolio-link:hover, .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .box-title {
-  flex-grow: 1;
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+  padding-right: 0;
 }
 
 .portfolio-title {
@@ -1584,5 +1581,13 @@ img {
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--primery-title-color);
+}
+
+@media screen and (max-width: 480px) {
+  .overlay-text {
+    font-size: 4vw;
+    padding-top: 50px;
+    padding-left: 18px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
