@@ -774,7 +774,7 @@ img {
 
 @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../img/hero/hero@2x-mobile.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero@2x-mobile.jpg);
   }
 }
 
@@ -922,8 +922,8 @@ img {
 }
 
 .occupation-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 @media screen and (max-width: 1199px) {
